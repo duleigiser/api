@@ -6,7 +6,7 @@ var table = require('../mock/table.json')
 router.post('/',  function(req, res, next) {
   console.log(req.body)
   if(req.body.len==5){
-    const lists = table.lists.slice(1,5);
+    const lists = table.lists.slice(0,5);
     table.lists = lists
     res.json(
       table
