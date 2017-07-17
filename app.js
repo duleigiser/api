@@ -1,3 +1,5 @@
+require('babel-core/register');
+require('babel-polyfill');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -7,9 +9,23 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var table = require('./routes/table');
-
+var login = require('./routes/login')
+//import axios from 'axios'
+var  lessMiddleware = require("less-middleware");
 var app = express();
 
+var debug = require('debug')('my-application');
+
+// cors
+app.all('*', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "http://localhost:8081");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    res.header("X-Powered-By",' 3.2.1')
+
+    res.header("Access-Control-Allow-Credentials"," true");
+    next();
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -24,13 +40,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/table', table);
-
+app.use('/login',login)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
+
+app.use(lessMiddleware({
+    src: __dirname + "/less",
+    dest: __dirname + "/public/css",
+    prefix: "/css",
+    force: true
+}));
+app.use(express.static(__dirname + "/public"));
 
 // error handler
 app.use(function(err, req, res, next) {
