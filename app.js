@@ -12,13 +12,15 @@ var table = require('./routes/table');
 var login = require('./routes/login')
 //import axios from 'axios'
 var  lessMiddleware = require("less-middleware");
+var compression = require('compression')
 var app = express();
+app.use(compression());
 
 var debug = require('debug')('my-application');
 
 // cors
 app.all('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost:8081");
+    res.header("Access-Control-Allow-Origin", "http://127.0.0.1:8080");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     res.header("X-Powered-By",' 3.2.1')
@@ -37,7 +39,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', index);
 app.use('/table', table);
 app.use('/login',login)
@@ -54,6 +55,7 @@ app.use(lessMiddleware({
     prefix: "/css",
     force: true
 }));
+
 app.use(express.static(__dirname + "/public"));
 
 // error handler

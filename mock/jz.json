@@ -1,0 +1,76 @@
+ [
+     [{
+         "org_id": "c21834b4-1cb0-490f-a2a8-deeaf7f7e065",
+         "org_name": "岱海发电",
+         "qdnum": "4",
+         "tjnum": "4",
+         "runtime": "370天 18小时",
+         "totalqdnum": "4",
+         "totaltjnum": "4",
+         "totalruntime": "370天 18小时",
+         "seriesruntime": "35天 11小时",
+         "lastlyqdtime": "2017-02-03 06:58:01",
+         "lastlytjtime": "2017-01-29 22:36:18"
+     }, {
+         "org_id": "c21834b4-1cb0-490f-a2a8-deeaf7f7e065",
+         "org_name": "岱海发电",
+         "qdnum": "3",
+         "tjnum": "3",
+         "runtime": "53.0小时",
+         "totalqdnum": "3",
+         "totaltjnum": "3",
+         "totalruntime": "53.0小时",
+         "seriesruntime": "66天 7小时",
+         "lastlyqdtime": "2017-01-03 10:14:13",
+         "lastlytjtime": "2016-12-17 01:34:00"
+     }, {
+         "org_id": "c21834b4-1cb0-490f-a2a8-deeaf7f7e065",
+         "org_name": "岱海发电",
+         "qdnum": "6",
+         "tjnum": "6",
+         "runtime": "3.0小时",
+         "totalqdnum": "6",
+         "totaltjnum": "6",
+         "totalruntime": "250002天 4小时",
+         "seriesruntime": "5天 14小时",
+         "lastlyqdtime": "2017-01-04 08:02:28",
+         "lastlytjtime": "2017-01-09 22:55:47"
+     }, {
+         "org_id": "c21834b4-1cb0-490f-a2a8-deeaf7f7e065",
+         "org_name": "岱海发电",
+         "qdnum": "3",
+         "tjnum": "3",
+         "runtime": "59.0小时",
+         "totalqdnum": "3",
+         "totaltjnum": "3",
+         "totalruntime": "59.0小时",
+         "seriesruntime": "1天 10小时",
+         "lastlyqdtime": "2017-03-09 07:54:44",
+         "lastlytjtime": "2016-12-16 02:06:21"
+     }],
+     [{
+         "org_id": "472212af-1977-462b-a74a-a1f36ed6562d",
+         "org_name": "宁东发电",
+         "qdnum": "6",
+         "tjnum": "6",
+         "runtime": "372天 5小时",
+         "totalqdnum": "6",
+         "totaltjnum": "6",
+         "totalruntime": "372天 5小时",
+         "seriesruntime": "19.0小时",
+         "lastlyqdtime": "2017-02-02 17:42:17",
+         "lastlytjtime": "2017-01-24 22:59:21"
+     }, {
+         "org_id": "472212af-1977-462b-a74a-a1f36ed6562d",
+         "org_name": "宁东发电",
+         "qdnum": "4",
+         "tjnum": "4",
+         "runtime": "373天 15小时",
+         "totalqdnum": "4",
+         "totaltjnum": "4",
+         "totalruntime": "373天 15小时",
+         "seriesruntime": "218天 16小时",
+         "lastlyqdtime": "2016-08-04 01:35:12",
+         "lastlytjtime": "2016-07-21 10:17:23"
+     }]
+ ]

@@ -1,0 +1,108 @@
+{
+  "total": 644,
+  "pagedata": [
+    [{
+      "JXHKSSJ": " ",
+      "PROFESSIONAL": "间冷",
+      "PRACTICE_CURRENT": "221.01",
+      "ORG_NAME": "宁东发电",
+      "RATED_CURRENT": "268",
+      "KKS_CODE": "NXND:DCS1_10BBB12CE201",
+      "G_ID": "1",
+      "OPENING_RANGE": "-1",
+      "DEVICE_NAME": "宁东发电:#1机组#12循环水泵",
+      "TYPE": "ZD",
+      "ORG_ID": "472212af-1977-462b-a74a-a1f36ed6562d"
+    }, {
+      "OPENING_RANGE": "30"
+    }, {
+      "OPENING_RANGE": "50"
+    }, {
+      "OPENING_RANGE": "70"
+    }, {
+      "ORG_NAME": "宁东发电",
+      "G_ID": "1",
+      "RATED_CURRENT": "268",
+      "DEVICE_NAME": "宁东:#1机组#12循环水泵",
+      "JXHSC": "0天6时48分",
+      "ORG_ID": "472212af-1977-462b-a74a-a1f36ed6562d",
+      "JXHCXSC1": 24513,
+      "PROFESSIONAL": "间冷",
+      "PRACTICE_CURRENT": "221.7468",
+      "OPENING_RANGE": "90",
+      "THE_LAST_TIME": "0天6时48分",
+      "ID": "eb461114-f92d-42d1-8186-ece7bc9b65ab",
+      "CURRENT_RANGE": "90",
+      "KKSCODE": "NXND:DCS1_10BBB12CE201",
+      "JXHKSSJ1": " "
+    }, {
+      "OPENING_RANGE": "100"
+    }, {
+      "OPENING_RANGE": "101"
+    }],
+    [{
+      "ORG_NAME": "宁东发电",
+      "G_ID": "1",
+      "RATED_CURRENT": "287",
+      "DEVICE_NAME": "宁东发电:#1机组#11锅炉启动疏水泵",
+      "JXHSC": "0天6时51分",
+      "ORG_ID": "472212af-1977-462b-a74a-a1f36ed6562d",
+      "JXHKSSJ": " ",
+      "JXHCXSC1": 24697,
+      "PROFESSIONAL": "锅炉",
+      "PRACTICE_CURRENT": "0.08",
+      "KKS_CODE": "NXND:DCS1_10HAG77AP001CE",
+      "OPENING_RANGE": "-1",
+      "THE_LAST_TIME": "0天6时51分",
+      "ID": "b8b7b302-3cf2-4606-b2b6-7795ebcd3960",
+      "CURRENT_RANGE": "-1",
+      "KKSCODE": "NXND:DCS1_10HAG77AP001CE",
+      "JXHKSSJ1": " ",
+      "TYPE": "ZD"
+    }, {
+      "OPENING_RANGE": "30"
+    }, {
+      "OPENING_RANGE": "50"
+    }, {
+      "OPENING_RANGE": "70"
+    }, {
+      "OPENING_RANGE": "90"
+    }, {
+      "OPENING_RANGE": "100"
+    }, {
+      "OPENING_RANGE": "101"
+    }],
+    [{
+      "ORG_NAME": "宁东发电",
+      "G_ID": "1",
+      "RATED_CURRENT": "287",
+      "DEVICE_NAME": "宁东发电:#1机组#12锅炉启动疏水泵",
+      "JXHSC": "0天6时51分",
+      "ORG_ID": "472212af-1977-462b-a74a-a1f36ed6562d",
+      "JXHKSSJ": " ",
+      "JXHCXSC1": 24695,
+      "PROFESSIONAL": "锅炉",
+      "PRACTICE_CURRENT": "0.11",
+      "KKS_CODE": "NXND:DCS1_10HAG77AP002CE",
+      "OPENING_RANGE": "-1",
+      "THE_LAST_TIME": "0天6时51分",
+      "ID": "fe566bae-2954-4bb1-bee3-2300d3a6672e",
+      "CURRENT_RANGE": "-1",
+      "KKSCODE": "NXND:DCS1_10HAG77AP002CE",
+      "JXHKSSJ1": " ",
+      "TYPE": "ZD"
+    }, {
+      "OPENING_RANGE": "30"
+    }, {
+      "OPENING_RANGE": "50"
+    }, {
+      "OPENING_RANGE": "70"
+    }, {
+      "OPENING_RANGE": "90"
+    }, {
+      "OPENING_RANGE": "100"
+    }, {
+      "OPENING_RANGE": "101"
+    }]
+  ]
+}

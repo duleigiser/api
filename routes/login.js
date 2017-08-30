@@ -6,7 +6,8 @@ const request = require('request-promise-native').defaults({jar: true});
 const path = require('path');
 const tough = require('tough-cookie');
 import axios from 'axios'
-const proxy  = "http://172.168.100.112:7001/jsjd/"
+const proxy  = "http://172.168.100.112:7001/jsjd"
+//
 //var trend=require('../moddleware/trend.json')
 
 axios.defaults.withCredentials=false;
@@ -46,12 +47,10 @@ async function login(name,password){
                 path:"/",
             }
         }
-        //console.log(obj)
         var cookie = new tough.Cookie(obj);
-        console.log(cookie)
+        //console.log(cookie)
         cookieJar.setCookie(cookie,proxy)
     }
-    
     return cookieJar
     //console.log(obj)
    // let cookie = new tough.Cookie(obj);
@@ -60,6 +59,24 @@ async function login(name,password){
     //console.log(resCookie);
    // console.log(cookiefix);
 }
+login()
+router.get('/', function(req, res, next) {
+   res.json({"la":"登录成功"})
+})
+
+// router.get('*',async function(req,res,next){
+//     console.log(proxy+req.path+ req.query)
+//     console.log(JSON.stringify(req.path))
+//     var url = proxy+req.path;
+//     var res1 = JSON.parse(await request({
+//         method:req.method,
+//         uri:url,
+//         jar:cookieJar,
+//         gzip:true
+//     }))
+//     res.json(res1)
+//     next()
+// })
 router.get('/trend',function(req,res,next){
     var _callback = req.query.callback;
     if(_callback){
@@ -72,19 +89,25 @@ router.get('/trend',function(req,res,next){
 })
 
 router.get('/jg',async(req, res, next) => {
-  var url = proxy+"/portal/getdmyFDL.do";
-    var res1 = JSON.parse(await request({
-        method:"get",
+    var url = proxy+"/jsjd/portal.do";
+    var res1 = await request({
+        method:"post",
         uri:url,
+        data:{
+            "method":"getYXJXPlan",
+            "orgid":"a61365e2-969d-4352-b3f8-805027ab9f1d",
+            "gid":"",
+            "year":"",
+            "unit":""
+        },
         jar:cookieJar,
         gzip:true
-    }))
+    })
     //console.log(cookieJar)
     //console.log(res1)
     res.json(res1)
 })
 router.get('/la',async(req,res,next)=>{
-    console.log(req)
     var url = proxy+"/portal/getProject.do?pagenum=1&pagesize=2&ispage=true&orgid=a61365e2-969d-4352-b3f8-805027ab9f1d"
     var res1 = JSON.parse(await request({
         method:"get",
@@ -118,10 +141,5 @@ function isObjectEmpty(obj) {
             return false;
     return true;
 }
-login()
-router.get('/', function(req, res, next) {
-    //console.log(login())
-   res.json({"la":"登录成功"})
-})
 
 module.exports = router;
