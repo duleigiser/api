@@ -1,21 +1,20 @@
 {
-  "total": 1316,
+  "total": 1078,
   "pagedata": [
-    
-    [{
-      "STATISTICAL_START_TIME": " ",
+    {
       "JXHKSSJ": " ",
       "PROFESSIONAL": "锅炉",
-      "PRACTICE_CURRENT": "69.46",
+      "PRACTICE_CURRENT": "0.00",
       "ORG_NAME": "岱海发电",
       "RATED_CURRENT": "95.1",
-      "KKS_CODE": "NMDH:10HFC40CE101XQ01",
+      "KKS_CODE": "NMDH:10HFC10CE101XQ01",
       "G_ID": "1",
       "OPENING_RANGE": "-1",
-      "DEVICE_NAME": "岱海发电:#1机组磨煤机D",
+      "DEVICE_NAME": "岱海发电:#1机组磨煤机A",
       "TYPE": "ZD",
       "ORG_ID": "c21834b4-1cb0-490f-a2a8-deeaf7f7e065"
-    }]
-   
+    }, {
+      "OPENING_RANGE": "30"
+    }
   ]
 }

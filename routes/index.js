@@ -5,7 +5,9 @@ var md5 = require("./md5");
 var ip  = require('../moddleware/ip')
 var tm= require('../mock/tm.json')//调门展示
 var tmjc = require('../mock/tmjc.json');
+var jh = require('../mock/jh.json');//检修计划维护
 var api = require('./api')
+var da = require("../mock/da.json")
 //  console.log(api.get)
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -14,6 +16,7 @@ router.get('/', function(req, res, next) {
  });
 
 });
+
 axios.defaults.withCredentials=false;
 const parseCookie = cookies => {
     let cookie = ''
@@ -22,9 +25,22 @@ const parseCookie = cookies => {
     })
     return cookie
 }
+router.get('/zdmx',function(req,res,nexr){
+    var json = require('../mock/zdmx.json')
+    res.json(json)
+})
 router.get('/json',function(req,res,next){
     var json = require('../mock/data.json')
     res.json(json)
+})
+router.get("/zd",function(req,res,next){
+    var data = require('../mock/zd.json')
+    res.json(data)
+
+})
+router.get('/org',function(req,res,next){
+    var data = require('../mock/org.json')
+    res.json(data)
 })
 //var proxy = "http://10.10.98.108:8080/jsjd/"
 var proxy  = "http://172.168.100.112:7001/jsjd/"
@@ -47,6 +63,10 @@ router.get('/jsjd/jg',async(req, res, next) => {
     const cookies = req.cookies;
     let response = await api.get(url,"",cookies)
     res.status(200).json(response.data)
+})
+router.post('/jsjd/portal.do',async(req,res,next)=>{
+   
+    res.json(da)
 })
 router.get('/jsjd/fdl',async(req,res,next)=>{
     var url = proxy+"/portal/getdmyFDL.do";
@@ -104,8 +124,11 @@ router.get("/jsjd/pblh/getTimeInterval.do",async(req,res,next)=>{
     //res.json({"ddd":"dd"})
 })
 router.post("/jsjd/tmzd.do",function(req,res){
-    console.log(req);
-    res.json(tmjc)
+   // console.log(req);
+    res.json(tm)
+})
+router.post("/jsjd/portal/getJXJHList.do",function(req,res){
+    res.json(jh)
 })
 
 module.exports = router;
