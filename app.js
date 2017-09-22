@@ -20,7 +20,8 @@ var debug = require('debug')('my-application');
 
 // cors
 app.all('*', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://127.0.0.1:8081");
+    // res.header("Access-Control-Allow-Origin", "http://127.0.0.1:8081");
+    res.header("Access-Control-Allow-Origin", "http://172.168.100.112:7001");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     res.header("X-Powered-By",' 3.2.1')
